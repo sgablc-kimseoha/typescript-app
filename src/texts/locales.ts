@@ -1,7 +1,7 @@
-import enMessages from './langues/en-US.json';
-import koMessages from './langues/ko-KR.json';
+import enMessages from './messages/enMessages.json';
+import koMessages from './messages/koMessages.json';
 
-export const locales = {
+export const localeEntry: { [key: string]: any } = {
     en: enMessages,
     ko: koMessages,
 };
