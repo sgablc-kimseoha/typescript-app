@@ -1,20 +1,22 @@
-import React from 'react';
 import './App.css';
 
-import LocaleProvider from 'providers/LocaleProvider';
+import IntlProvider from 'providers/IntlProvider';
 import ErrorBoundary from 'providers/ErrorBoundary';
 import StoreProvider from 'providers/StoreProvider';
+import ThemeProvider from 'providers/ThemeProvider';
 
 const App = () => {
-    return (
-        <LocaleProvider>
-            <ErrorBoundary>
-                <StoreProvider>
-                    <div className="App" />
-                </StoreProvider>
-            </ErrorBoundary>
-        </LocaleProvider>
-    );
+  return (
+    <IntlProvider>
+      <ErrorBoundary>
+        <StoreProvider>
+          <ThemeProvider>
+            <div className="App" />
+          </ThemeProvider>
+        </StoreProvider>
+      </ErrorBoundary>
+    </IntlProvider>
+  );
 };
 
 export default App;
