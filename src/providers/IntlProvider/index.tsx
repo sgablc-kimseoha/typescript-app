@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { IntlProvider as ReactIntlProvider } from 'react-intl';
 import { defaultLocale } from 'constants/default';
-import { localeEntry } from 'texts/locales';
+import localeEntry from 'texts/localeEntry';
 
 const IntlProvider = ({ children }: any) => {
   const [locale, setLocale] = useState(defaultLocale);
