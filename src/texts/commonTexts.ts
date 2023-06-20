@@ -1,9 +1,11 @@
 import { defineMessages } from 'react-intl';
 
-export const commonTexts = defineMessages({
-    save: {
-        id: 'commonTexts.inputs.submit',
-        description: 'Title of submit action',
-        defaultMessage: 'Submit',
-    },
+const commonTexts = defineMessages({
+  type: {
+    id: 'commonTexts.type',
+    description: 'Type',
+    defaultMessage: 'Type',
+  },
 });
+
+export default commonTexts;

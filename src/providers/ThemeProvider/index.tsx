@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import { defaultTheme } from 'constants/defaultTheme';
-import { Theme } from 'constants/theme.types';
+import { Theme } from 'types/theme';
 
 const ThemeContext = createContext({
   changeTheme: (theme: Theme) => {
