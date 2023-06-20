@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
 import { IntlProvider as ReactIntlProvider } from 'react-intl';
 import {
-  LANGUAGE_LIST,
+  LOCALE_ENTRIRES as entries,
   DEFAULT_LANGUAGE,
   GLOBAL_LANGUAGE,
 } from 'constants/defaultConfigs';
@@ -16,12 +16,12 @@ const LocaleContext = createContext<{
 
 const IntlProvider = ({ children }: any) => {
   const [locale, setLocale] = useState(DEFAULT_LANGUAGE);
-  const [messages, setMessages] = useState({});
-  const [language, setLanguage] = useState('');
+  const [messages, setMessages] = useState();
+  const [language, setLanguage] = useState(DEFAULT_LANGUAGE);
 
   useEffect(() => {
-    const currentLocale = navigator.language;
-    setLocale(currentLocale);
+    const lo = navigator.language;
+    setLocale(lo);
   }, []);
 
   useEffect(() => {
@@ -29,13 +29,17 @@ const IntlProvider = ({ children }: any) => {
     updateLanguage(lang);
   }, [locale]);
 
-  useEffect(() => {
-    setMessages(LANGUAGE_LIST[language]);
-  }, [language]);
+  const updateLanguage = (lang: string) => {
+    const entry = entries[lang];
 
-  const updateLanguage = async (lang: string) => {
-    if (LANGUAGE_LIST[lang]) setLanguage(lang);
-    else setLanguage(GLOBAL_LANGUAGE);
+    if (entry) {
+      setLanguage(entry.language);
+      setMessages(entry.messages);
+    } else {
+      const globalEntry = entries[GLOBAL_LANGUAGE];
+      setLanguage(globalEntry.language);
+      setMessages(globalEntry.messages);
+    }
   };
 
   return (
