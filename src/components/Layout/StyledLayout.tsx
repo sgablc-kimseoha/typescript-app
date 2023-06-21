@@ -5,8 +5,8 @@ import { thresholdMobile, spacing, colors, typography } from 'constants/styles';
 const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  // height: 100vh;
+  // width: 100vw;
 
   @media screen and (min-width: ${thresholdMobile}) {
     flex-direction: row;
