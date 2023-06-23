@@ -1,24 +1,28 @@
-import IntlProvider from 'providers/IntlProvider';
-import ErrorBoundary from 'providers/ErrorBoundary';
-import ThemeProvider from 'providers/ThemeProvider';
+import ErrorBoundary from 'common/error-boundary/ErrorBoundary';
+
+import I18nProvider from 'i18n/I18nProvider';
+import AuthProvider from 'auth/AuthProvider';
+import ThemeProvider from 'theme/ThemeProvider';
 
 import { Provider as StoreProvider } from 'react-redux';
-import store from 'common/store';
+import store from 'services/store';
 
 import { RouterProvider } from 'react-router-dom';
-import router from 'common/router';
+import router from 'routes/router';
 
 const App = () => {
   return (
-    <IntlProvider>
-      <ErrorBoundary>
+    <ErrorBoundary>
+      <I18nProvider>
         <StoreProvider store={store}>
-          <ThemeProvider>
-            <RouterProvider router={router} />
-          </ThemeProvider>
+          <AuthProvider>
+            <ThemeProvider>
+              <RouterProvider router={router} />
+            </ThemeProvider>
+          </AuthProvider>
         </StoreProvider>
-      </ErrorBoundary>
-    </IntlProvider>
+      </I18nProvider>
+    </ErrorBoundary>
   );
 };
 

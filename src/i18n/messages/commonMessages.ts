@@ -1,11 +1,11 @@
 import { defineMessages } from 'react-intl';
 
-const commonTexts = defineMessages({
+const commonMessages = defineMessages({
   type: {
-    id: 'commonTexts.type',
+    id: 'commonMessages.type',
     description: 'Type',
     defaultMessage: 'Type',
   },
 });
 
-export default commonTexts;
+export default commonMessages;

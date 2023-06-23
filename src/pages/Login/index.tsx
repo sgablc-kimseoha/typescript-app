@@ -1,3 +1,4 @@
+import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
 const StyledHome = styled.div`
@@ -5,8 +6,8 @@ const StyledHome = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
 
   > img,
   > svg {
@@ -21,7 +22,8 @@ const StyledHome = styled.div`
 `;
 
 const Login = () => {
-  return <StyledHome>LOGIN!!!</StyledHome>;
+  const intl = useIntl();
+  return <StyledHome>LOGIN</StyledHome>;
 };
 
 export default Login;

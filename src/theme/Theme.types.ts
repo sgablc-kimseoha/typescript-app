@@ -6,7 +6,6 @@ export type TypographyBody = 'body1' | 'body2';
 export type TypographyType = TypographyHeading | TypographyBody;
 
 export type Breakpoint = 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-export type ThemeMode = 'light' | 'dark';
 
 type TypographyVariant = {
   [key: string]:
@@ -17,8 +16,9 @@ type TypographyVariant = {
       };
 };
 
+export type ThemeType = 'light' | 'dark';
+
 export type Theme = {
-  mode: ThemeMode;
   palette: {
     primary: string;
     secondary: string;

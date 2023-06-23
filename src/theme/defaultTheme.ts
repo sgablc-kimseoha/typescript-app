@@ -1,7 +1,6 @@
-import { Breakpoint, Theme } from '../types/theme';
+import { Breakpoint, Theme } from './Theme.types';
 
 export const defaultTheme: Theme = {
-  mode: 'light',
   palette: {
     primary: '#1a5afe',
     secondary: '#3be3db',

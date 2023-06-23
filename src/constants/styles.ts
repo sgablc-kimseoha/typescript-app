@@ -30,6 +30,40 @@ export const typography = {
   sizeF0: '12px',
 };
 
+export const lightColors = {
+  text: {
+    primary: 'rgba(0, 0, 0, 0.87)',
+    secondary: 'rgba(0, 0, 0, 0.6)',
+    disabled: 'rgba(0, 0, 0, 0.38)',
+    hint: 'rgba(0, 0, 0, 0.3)',
+    white: '#fff',
+  },
+  background: {
+    default: '#f4f4f7',
+  },
+  border: {
+    main: 'rgba(0, 0, 0, 0.06)',
+    dark: 'rgba(0, 0, 0, 0.12)',
+  },
+};
+
+export const darkColors = {
+  text: {
+    primary: 'rgba(255, 255, 255, 0.87)',
+    secondary: 'rgba(255, 255, 255, 0.6)',
+    disabled: 'rgba(255, 255, 255, 0.38)',
+    hint: 'rgba(255, 255, 255, 0.3)',
+    white: '#fff',
+  },
+  background: {
+    default: '#121212',
+  },
+  border: {
+    main: 'rgba(255, 255, 255, 0.06)',
+    dark: 'rgba(255, 255, 255, 0.12)',
+  },
+};
+
 export const colors = {
   main: '#1a5afe',
   mainLight: '#a8b2ff',

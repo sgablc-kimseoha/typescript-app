@@ -1,11 +1,11 @@
 import { defineMessages } from 'react-intl';
 
-const actionTexts = defineMessages({
+const actionMessages = defineMessages({
   save: {
-    id: 'actionTexts.submit',
+    id: 'actionMessages.submit',
     description: 'Title of submit action',
     defaultMessage: 'Submit',
   },
 });
 
-export default actionTexts;
+export default actionMessages;
